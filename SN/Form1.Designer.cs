@@ -70,6 +70,7 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btn_NormInterp = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.txtCCFRes = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtCCProgress = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -88,8 +89,6 @@
             this.btnSaveNormSpectrum = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnLoadNormSpectrum = new System.Windows.Forms.Button();
-            this.txtCCFRes = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -132,7 +131,7 @@
             // 
             this.btnLoadTemplateSpectrum.Location = new System.Drawing.Point(12, 46);
             this.btnLoadTemplateSpectrum.Name = "btnLoadTemplateSpectrum";
-            this.btnLoadTemplateSpectrum.Size = new System.Drawing.Size(135, 28);
+            this.btnLoadTemplateSpectrum.Size = new System.Drawing.Size(213, 28);
             this.btnLoadTemplateSpectrum.TabIndex = 1;
             this.btnLoadTemplateSpectrum.Text = "Load Temp. Spectrum";
             this.btnLoadTemplateSpectrum.UseVisualStyleBackColor = true;
@@ -142,7 +141,7 @@
             // 
             this.btnLoadObservedSpectrum.Location = new System.Drawing.Point(12, 12);
             this.btnLoadObservedSpectrum.Name = "btnLoadObservedSpectrum";
-            this.btnLoadObservedSpectrum.Size = new System.Drawing.Size(135, 28);
+            this.btnLoadObservedSpectrum.Size = new System.Drawing.Size(213, 28);
             this.btnLoadObservedSpectrum.TabIndex = 2;
             this.btnLoadObservedSpectrum.Text = "Load Obs. Spectrum";
             this.btnLoadObservedSpectrum.UseVisualStyleBackColor = true;
@@ -249,9 +248,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(812, 535);
+            this.tabPage2.Size = new System.Drawing.Size(812, 546);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Analyze";
+            this.tabPage2.Text = "Analysis";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // label5
@@ -439,7 +438,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(205, 237);
+            this.tabPage4.Size = new System.Drawing.Size(205, 252);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Approx";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -534,7 +533,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(205, 237);
+            this.tabPage5.Size = new System.Drawing.Size(205, 252);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Interp";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -569,6 +568,14 @@
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "RV Shift";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // txtCCFRes
+            // 
+            this.txtCCFRes.Location = new System.Drawing.Point(6, 190);
+            this.txtCCFRes.Name = "txtCCFRes";
+            this.txtCCFRes.ReadOnly = true;
+            this.txtCCFRes.Size = new System.Drawing.Size(190, 20);
+            this.txtCCFRes.TabIndex = 20;
             // 
             // label13
             // 
@@ -701,7 +708,7 @@
             this.btnCCFGo.Name = "btnCCFGo";
             this.btnCCFGo.Size = new System.Drawing.Size(194, 28);
             this.btnCCFGo.TabIndex = 13;
-            this.btnCCFGo.Text = "Run CCF Analizis";
+            this.btnCCFGo.Text = "Run CCF Analysis";
             this.btnCCFGo.UseVisualStyleBackColor = true;
             this.btnCCFGo.Click += new System.EventHandler(this.btnCCFGo_Click);
             // 
@@ -725,30 +732,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnLoadNormSpectrum
-            // 
-            this.btnLoadNormSpectrum.Location = new System.Drawing.Point(150, 12);
-            this.btnLoadNormSpectrum.Name = "btnLoadNormSpectrum";
-            this.btnLoadNormSpectrum.Size = new System.Drawing.Size(75, 62);
-            this.btnLoadNormSpectrum.TabIndex = 13;
-            this.btnLoadNormSpectrum.Text = "Load Norm. Spectrum";
-            this.btnLoadNormSpectrum.UseVisualStyleBackColor = true;
-            this.btnLoadNormSpectrum.Click += new System.EventHandler(this.btnLoadNormSpectrum_Click);
-            // 
-            // txtCCFRes
-            // 
-            this.txtCCFRes.Location = new System.Drawing.Point(6, 190);
-            this.txtCCFRes.Name = "txtCCFRes";
-            this.txtCCFRes.ReadOnly = true;
-            this.txtCCFRes.Size = new System.Drawing.Size(190, 20);
-            this.txtCCFRes.TabIndex = 20;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 601);
-            this.Controls.Add(this.btnLoadNormSpectrum);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.groupBox4);
@@ -757,7 +745,7 @@
             this.Controls.Add(this.btnLoadObservedSpectrum);
             this.Controls.Add(this.btnLoadTemplateSpectrum);
             this.Name = "Form1";
-            this.Text = "SN";
+            this.Text = "SN1";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -835,7 +823,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtCurShift;
-        private System.Windows.Forms.Button btnLoadNormSpectrum;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtCCProgress;
         private System.Windows.Forms.Button btnCCMask;

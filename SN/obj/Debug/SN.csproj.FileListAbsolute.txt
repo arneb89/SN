@@ -26,3 +26,13 @@ G:\SN\SN\obj\Debug\SN.Form1.resources
 G:\SN\SN\obj\Debug\SN.Properties.Resources.resources
 G:\SN\SN\obj\Debug\SN.csproj.GenerateResource.Cache
 D:\SN\SN\obj\Debug\SpectrViewer.PlotForm.resources
+D:\SN1\SN\bin\Debug\SN.exe.config
+D:\SN1\SN\obj\Debug\SN.exe
+D:\SN1\SN\obj\Debug\SN.pdb
+D:\SN1\SN\obj\Debug\ResolveAssemblyReference.cache
+D:\SN1\SN\obj\Debug\SN.Form1.resources
+D:\SN1\SN\obj\Debug\SpectrViewer.PlotForm.resources
+D:\SN1\SN\obj\Debug\SN.Properties.Resources.resources
+D:\SN1\SN\obj\Debug\SN.csproj.GenerateResource.Cache
+D:\SN1\SN\bin\Debug\SN.exe
+D:\SN1\SN\bin\Debug\SN.pdb

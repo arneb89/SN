@@ -155,51 +155,6 @@ namespace SN
             this.DrawObsSpecGraph();
         }
 
-        private void btnLoadNormSpectrum_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.ShowDialog();
-            string path = openFileDialog1.FileName;
-
-            StreamReader sr = new StreamReader(path);
-
-            string str;
-
-            int size = 0;
-            StreamReader sr_analyse = new StreamReader(path);
-            str = sr_analyse.ReadLine();
-            while (str != null)
-            {
-                size++;
-                str = sr_analyse.ReadLine();
-            }
-            sr_analyse.Close();
-
-            string[] strMas;
-
-            string[] stringSeparators = new string[] { " ", "\t" };
-
-            double[] lambda, flux;
-
-            lambda = new double[size];
-            flux = new double[size];
-
-            for (int i = 0; i < size; i++)
-            {
-                str = sr.ReadLine();
-                strMas = str.Split(stringSeparators, StringSplitOptions.RemoveEmptyEntries);
-                lambda[i] = double.Parse(strMas[0].Replace(".", ","));
-                flux[i] = double.Parse(strMas[1].Replace(".", ","));
-            }
-
-            this.cropLambdaMin = lambda.Min();
-            this.cropLambdaMax = lambda.Max();
-            this.normSpectrum = new Spectrum(lambda, flux);
-
-            sr.Close();
-
-            this.DrawNormSpecGraph();
-        }
-
         private void DrawObsSpecGraph()
         {
             plotObsSpectrum.Clear();
@@ -358,7 +313,18 @@ namespace SN
         {
             if (this.tempSpectrum == null)
             {
-                MessageBox.Show("Reference spectrum is't loaded...", "Error...");
+                MessageBox.Show("The template spectrum is't loaded...", "Error...");
+                return;
+            }
+            if (this.tempSpectrum == null)
+            {
+                MessageBox.Show("The observed spectrum is't loaded...", "Error...");
+                return;
+            }
+            if (this.tempSpectrum.LambdaSet.Max() < this.obsSpectrum.LambdaSet.Max() ||
+                this.tempSpectrum.LambdaSet.Min() > this.obsSpectrum.LambdaSet.Min())
+            {
+                MessageBox.Show("The template spectrum does not cover the observed spectrum...", "Error...");
                 return;
             }
 
