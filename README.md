@@ -4,6 +4,7 @@ SN1 - Spectra Normalization program
 
 SN was developed for normalization of stellar spectra to the continuum level. The spectra normalization is a quit hard work especially for cool stars due to strong line blending. This program models the continuum by low degree polynomial and its coefficients are searched by minimization of the discrepancy between the observed spectrum and the normalized theoretical spectrum which is multiplied to the polynomial.
 ---
+
 ![The example of found continuum level for fast rotating G2 star He373.](Ex_OBS.png)
 
 ![The comparison between the normalized spectrum of He373 and theoretical spectrum.](Ex_COMP.png)
