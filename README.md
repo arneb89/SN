@@ -1,5 +1,4 @@
-# SN
-Spectra normalization program
+h1 SN1 - Spectra Normalization program
 ---
 SN was developed for normalization of stellar spectra to the continuum level. The spectra normalization is a quit hard work especially for cool stars due to strong line blending. This program models the continuum by low degree polynomial and its coefficients are searched by minimization of the discrepancy between the observed spectrum and the normalized theoretical spectrum which is multiplied to the polynomial.
 ---
